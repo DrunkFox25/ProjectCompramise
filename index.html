@@ -51,7 +51,7 @@
 		"assets/image11.png"
 	alt="GFG image" />
 
-	    -->
+	    
 	<script>
 		var link = document.querySelector("link[rel~='icon']");
 		if (!link) {
@@ -61,7 +61,7 @@
 		}
 		link.href = 'assets/blueicon.ico';
 		
-	</script>
+	</script>-->
 	
 	
         <text> YOU'VE BEAN COMPRAMISED BY PETYA! </text>
@@ -71,6 +71,12 @@
 	</button>
 
 	<script>
+		var link = document.querySelector("link[rel~='icon']");
+		if (!link) {
+		    link = document.createElement('link');
+		    link.rel = 'icon';
+		    document.head.appendChild(link);
+		}
 		function show(){
 			alert('shit');
 			link.href = 'assets/redicon.ico';
