@@ -52,6 +52,16 @@
 	alt="GFG image" />
 
 	    -->
+	<script>
+		var link = document.querySelector("link[rel~='icon']");
+		if (!link) {
+		    link = document.createElement('link');
+		    link.rel = 'icon';
+		    document.head.appendChild(link);
+		}
+		link.href = 'assets/blueicon.ico';
+		
+	</script>
 	
 	
         <text> YOU'VE BEAN COMPRAMISED BY PETYA! </text>
@@ -63,14 +73,7 @@
 	<script>
 		function show(){
 			alert('shit');
-			var link = document.querySelector("link[rel~='icon']");
-			if (!link) {
-			    link = document.createElement('link');
-			    link.rel = 'icon';
-			    document.head.appendChild(link);
-			}
-			link.href = 'https://stackoverflow.com/favicon.ico';
-			//(document.querySelector('[type="image/x-icon"]')).href = "blueicon.ico";
+			link.href = 'assets/redicon.ico';
 		}
 	</script>
 
