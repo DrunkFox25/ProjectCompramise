@@ -1,5 +1,5 @@
 console.clear();
-
+alert('shit');
 var $form = document.querySelector('[rel="favicon-form"]');
 var $input = $form.querySelector('input');
 
