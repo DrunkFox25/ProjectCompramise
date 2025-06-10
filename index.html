@@ -6,58 +6,29 @@
         <!-- <link rel="shortcut icon" href=""/> -->
     </head>
     <body>
-	<img id="image1" src = "assets/image1.png" style = "width:10%" />
-	var image1 = document.getElementById("image1");
+	
 
-	<img id="image2" src=
-	"assets/image2.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image2 = document.getElementById("image2");
+	<img id="image1" src = "assets/image1.png" style = "width:10%;"/>
+
+	<img id="image2" src = "assets/image2.png" style = "width:10%;"/>
 	
-	<img id="image3" src=
-	"assets/image3.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image3 = document.getElementById("image3");
+	<img id="image3" src = "assets/image3.png" style = "width:10%;"/>
 	
-	<img id="image4" src=
-	"assets/image4.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image4 = document.getElementById("image4");
+	<img id="image4" src = "assets/image4.png" style = "width:10%;"/>
 	
-	<img id="image5" src=
-	"assets/image5.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image5 = document.getElementById("image5");
+	<img id="image5" src = "assets/image5.png" style = "width:10%;"/>
 	
-	<img id="image6" src=
-	"assets/image6.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image6 = document.getElementById("image6");
+	<img id="image6" src = "assets/image6.png" style = "width:10%;"/>
 	
-	<img id="image7" src=
-	"assets/image7.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image7 = document.getElementById("image7");
+	<img id="image7" src = "assets/image7.png" style = "width:10%;"/>
 	
-	<img id="image8" src=
-	"assets/image8.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image8 = document.getElementById("image8");
+	<img id="image8" src = "assets/image8.png" style = "width:10%;"/>
 	
-	<img id="image9" src=
-	"assets/image9.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image9 = document.getElementById("image9");
+	<img id="image9" src = "assets/image9.png" style = "width:10%;"/>
 	
-	<img id="image10" src=
-	"assets/image10.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image10 = document.getElementById("image10");
+	<img id="image10" src = "assets/image10.png" style = "width:10%;"/>
 	
-	<img id="image11" src=
-	"assets/image11.png"
-	alt="GFG image" style = "width:10%;"/>
-	var image11 = document.getElementById("image11");
+	<img id="image11" src = "assets/image11.png" style = "width:10%;"/>
 
 
 
@@ -71,6 +42,18 @@
 	</button>
 
 	<script>
+		var image1 = document.getElementById("image1"); image1.hidden = true;
+		var image2 = document.getElementById("image2"); image2.hidden = true;
+		var image3 = document.getElementById("image3"); image3.hidden = true;
+		var image4 = document.getElementById("image4"); image4.hidden = false;
+		var image5 = document.getElementById("image5"); image5.hidden = true;
+		var image6 = document.getElementById("image6"); image6.hidden = true;
+		var image7 = document.getElementById("image7"); image7.hidden = true;
+		var image8 = document.getElementById("image8"); image8.hidden = true;
+		var image9 = document.getElementById("image9"); image9.hidden = true;
+		var image10 = document.getElementById("image10"); image10.hidden = true;
+		var image11 = document.getElementById("image11"); image11.hidden = true;
+		
 		var link = document.querySelector("link[rel~='icon']");
 		if (!link) {
 		    link = document.createElement('link');
@@ -83,6 +66,18 @@
 			alert('shit');
 			
 			link.href = 'https://raw.githubusercontent.com/DrunkFox25/ProjectCompramise/refs/heads/main/assets/reddot.ico';
+
+			image1.hidden = false;
+			image2.hidden = false;
+			image3.hidden = false;
+			image4.hidden = true;
+			image5.hidden = false;
+			image6.hidden = false;
+			image7.hidden = false;
+			image8.hidden = false;
+			image9.hidden = false;
+			image10.hidden = false;
+			image11.hidden = false;
 		}
 	</script>
 
