@@ -64,7 +64,7 @@
 	</script>-->
 	
 	
-        <text> YOU'VE BEAN COMPRAMISED BY PETYA! </text>
+	<text> YOU'VE BEAN COMPRAMISED BY PETYA! </text>
 
 	<button type="button" onclick="show()" id="btnID">
 		UNDO
@@ -72,12 +72,12 @@
 
 	<script>
 		var link = document.querySelector("link[rel~='icon']");
+		if (!link) {
+		    link = document.createElement('link');
+		    link.rel = 'icon';
+		    document.head.appendChild(link);
+		}
 		function show(){
-			if (!link) {
-			    link = document.createElement('link');
-			    link.rel = 'icon';
-			    document.head.appendChild(link);
-			}
 			alert('shit');
 			link.href = 'https://raw.githubusercontent.com/DrunkFox25/ProjectCompramise/refs/heads/main/assets/reddot.ico';
 		}
