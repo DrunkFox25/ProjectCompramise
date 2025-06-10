@@ -63,7 +63,14 @@
 	<script>
 		function show(){
 			alert('shit');
-			(document.querySelector('[type="image/x-icon"]')).href = "blueicon.ico";
+			var link = document.querySelector("link[rel~='icon']");
+			if (!link) {
+			    link = document.createElement('link');
+			    link.rel = 'icon';
+			    document.head.appendChild(link);
+			}
+			link.href = 'https://stackoverflow.com/favicon.ico';
+			//(document.querySelector('[type="image/x-icon"]')).href = "blueicon.ico";
 		}
 	</script>
 
