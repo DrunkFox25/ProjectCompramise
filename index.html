@@ -44,22 +44,19 @@
 		UNDO
 	</button>
 	
-	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap()"/>
+	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap('image6', 'image7')" hidden = false/>
 	
-	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap()"/>
+	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap('image7', 'image8')" hidden = true/>
 	
-	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap()"/>
+	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap('image8', 'image6')" hidden = true/>
 
 	<script>
-		var strimage1 = "image1";
-		var image1 = document.getElementById(strimage1); image1.hidden = true;
+		var image1 = document.getElementById("image1"); image1.hidden = true;
 		var image2 = document.getElementById("image2"); image2.hidden = true;
 		var image3 = document.getElementById("image3"); image3.hidden = true;
 		var image4 = document.getElementById("image4"); image4.hidden = false;
 		var image5 = document.getElementById("image5"); image5.hidden = true;
-		var image6 = document.getElementById("image6"); image6.hidden = true;
-		var image7 = document.getElementById("image7"); image7.hidden = true;
-		var image8 = document.getElementById("image8"); image8.hidden = true;
+		
 		var image9 = document.getElementById("image9"); image9.hidden = true;
 		var image10 = document.getElementById("image10"); image10.hidden = true;
 		var image11 = document.getElementById("image11"); image11.hidden = true;
@@ -84,20 +81,16 @@
 			image3.hidden = false;
 			image4.hidden = true;
 			image5.hidden = false;
-			image6.hidden = false;
-			image7.hidden = true;
-			image8.hidden = true;
+			
 			image9.hidden = false;
 			image10.hidden = false;
 			image11.hidden = false;
 		}
 
-		function swap(){
-			image6.hidden = true;
-			image7.hidden = true;
-			image8.hidden = true;
-
-			//on.hidden = false;
+		function swap(var i1, var i2){
+			
+			var i1 = document.getElementById(stri1); i1.hidden = true;
+			var i2 = document.getElementById(stri2); i2.hidden = false;
 		}
 	</script>
 
