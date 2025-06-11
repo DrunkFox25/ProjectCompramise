@@ -40,15 +40,15 @@
 	    <br />
 	<text> YOU'VE BEAN COMPRAMISED BY PETYA! </text>
 
-	<button type="button" onclick="show()" id="btnID">
+	<button type="button" onclick="show()">
 		UNDO
 	</button>
 	
-	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap('image6', 'image7')" hidden = false/>
+	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap('image6', 'image7')" hidden/>
 	
-	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap('image7', 'image8')" hidden = true/>
+	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap('image7', 'image8')" hidden/>
 	
-	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap('image8', 'image6')" hidden = true/>
+	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap('image8', 'image6')" hidden/>
 
 	<script>
 		var image1 = document.getElementById("image1"); image1.hidden = true;
@@ -56,6 +56,7 @@
 		var image3 = document.getElementById("image3"); image3.hidden = true;
 		var image4 = document.getElementById("image4"); image4.hidden = false;
 		var image5 = document.getElementById("image5"); image5.hidden = true;
+
 		
 		var image9 = document.getElementById("image9"); image9.hidden = true;
 		var image10 = document.getElementById("image10"); image10.hidden = true;
