@@ -65,6 +65,8 @@
 		}
 
 		function itersrc(el, next){
+			console.log(el.src);
+			console.log(next.get(el.src));
 			el.src = next.get(el.src);
 		}
 
