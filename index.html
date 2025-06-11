@@ -9,7 +9,7 @@
 
 	<img id="image4" src = "assets/image4.png" style = "width:10%;"/>
 
-	<img id="image1" src = "assets/image1.png" style = "width:10%;"/>
+	<img id="image1" src = "assets/image1.png" style = "width:10%;" hidden/>
 
 	    <br />
 	    <br />
@@ -20,17 +20,13 @@
 	    <br />
 	    <br />
 
-	<img id="image2" src = "assets/image2.png" style = "width:10%;"/>
+	<img id="image2" src = "assets/image2.png" style = "width:10%;" hidden/>
+
+	<img id="image5" src = "assets/image5.png" style = "width:10%;" hidden/>
 	
-	<img id="image3" src = "assets/image3.png" style = "width:10%;"/>
+	<img id="image3" src = "assets/image3.png" style = "width:10%;" hidden/>
 	
-	<img id="image5" src = "assets/image5.png" style = "width:10%;"/>
-	
-	<img id="image9" src = "assets/image9.png" style = "width:10%;"/>
-	
-	<img id="image10" src = "assets/image10.png" style = "width:10%;"/>
-	
-	<img id="image11" src = "assets/image11.png" style = "width:10%;"/>
+	<img id="image11" src = "assets/image11.png" style = "width:10%;" hidden/>
 
 
 
@@ -40,27 +36,31 @@
 	    <br />
 	<text> YOU'VE BEAN COMPRAMISED BY PETYA! </text>
 
-	<button type="button" onclick="show()">
+	<button type="button" onclick="doit()">
 		UNDO
 	</button>
-	
+
+	    <br />
 	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap('image6', 'image7')"/>
 	
 	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap('image7', 'image8')" hidden/>
 	
 	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap('image8', 'image6')" hidden/>
 
+	    <text>                              </text>
+	
+	<img id="image9" src = "assets/image9.png" style = "width:10%;" onclick = "swap('image9', 'image10')" hidden/>
+	
+	<img id="image10" src = "assets/image10.png" style = "width:10%;" hidden/>
+
 	<script>
-		var image1 = document.getElementById("image1"); image1.hidden = true;
-		var image2 = document.getElementById("image2"); image2.hidden = true;
-		var image3 = document.getElementById("image3"); image3.hidden = true;
-		var image4 = document.getElementById("image4"); image4.hidden = false;
-		var image5 = document.getElementById("image5"); image5.hidden = true;
+		var image2 = document.getElementById("image2"); 
+		var image3 = document.getElementById("image3");
+		var image5 = document.getElementById("image5");
 
 		
-		var image9 = document.getElementById("image9"); image9.hidden = true;
-		var image10 = document.getElementById("image10"); image10.hidden = true;
-		var image11 = document.getElementById("image11"); image11.hidden = true;
+		var image9 = document.getElementById("image9");
+		var image11 = document.getElementById("image11");
 		
 		var link = document.querySelector("link[rel~='icon']");
 		if (!link) {
@@ -70,28 +70,26 @@
 		}
 
 		link.href = 'https://raw.githubusercontent.com/DrunkFox25/ProjectCompramise/refs/heads/main/assets/bluedot.ico';
+
+		function swap(stri1, stri2){
+			var i1 = document.getElementById(stri1); i1.hidden = true;
+			var i2 = document.getElementById(stri2); i2.hidden = false;
+		}
 		
-		function show(){
-			alert('What haz bean dun cannon b undun!');
+		function doit(){
+			alert('What haz bean dun cannon b undun! Plz click the pics');
 			
 			link.href = 'https://raw.githubusercontent.com/DrunkFox25/ProjectCompramise/refs/heads/main/assets/reddot.ico';
 			document.title = "HeHe Boi";
 
-			image1.hidden = false;
+			swap('image4', 'image1');
+			
 			image2.hidden = false;
 			image3.hidden = false;
-			image4.hidden = true;
 			image5.hidden = false;
+			image11.hidden = false;
 			
 			image9.hidden = false;
-			image10.hidden = false;
-			image11.hidden = false;
-		}
-
-		function swap(stri1, stri2){
-			
-			var i1 = document.getElementById(stri1); i1.hidden = true;
-			var i2 = document.getElementById(stri2); i2.hidden = false;
 		}
 	</script>
 
