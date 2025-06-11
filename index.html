@@ -26,12 +26,6 @@
 	
 	<img id="image5" src = "assets/image5.png" style = "width:10%;"/>
 	
-	<img id="image6" src = "assets/image6.png" style = "width:10%;"/>
-	
-	<img id="image7" src = "assets/image7.png" style = "width:10%;"/>
-	
-	<img id="image8" src = "assets/image8.png" style = "width:10%;"/>
-	
 	<img id="image9" src = "assets/image9.png" style = "width:10%;"/>
 	
 	<img id="image10" src = "assets/image10.png" style = "width:10%;"/>
@@ -49,6 +43,12 @@
 	<button type="button" onclick="show()" id="btnID">
 		UNDO
 	</button>
+	
+	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap(\"image7\")"/>
+	
+	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap(\"image8\")"/>
+	
+	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap(\"image6\")"/>
 
 	<script>
 		var image1 = document.getElementById("image1"); image1.hidden = true;
@@ -71,6 +71,7 @@
 		}
 
 		link.href = 'https://raw.githubusercontent.com/DrunkFox25/ProjectCompramise/refs/heads/main/assets/bluedot.ico';
+		
 		function show(){
 			alert('What haz bean dun cannon b undun!');
 			
@@ -83,11 +84,19 @@
 			image4.hidden = true;
 			image5.hidden = false;
 			image6.hidden = false;
-			image7.hidden = false;
-			image8.hidden = false;
+			image7.hidden = true;
+			image8.hidden = true;
 			image9.hidden = false;
 			image10.hidden = false;
 			image11.hidden = false;
+		}
+
+		function swap(var on){
+			image6.hidden = true;
+			image7.hidden = true;
+			image8.hidden = true;
+
+			on.hidden = false;
 		}
 	</script>
 
