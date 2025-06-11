@@ -7,9 +7,7 @@
     </head>
     <body>
 
-	<img id="image4" src = "assets/image4.png" style = "width:10%;"/>
-
-	<img id="image1" src = "assets/image1.png" style = "width:10%;" hidden/>
+	<img id="imageA" src = "assets/image4.png" style = "width:10%;"/>
 
 	    <br />
 	    <br />
@@ -20,13 +18,13 @@
 	    <br />
 	    <br />
 
-	<img id="image2" src = "assets/image2.png" style = "width:10%;" hidden/>
+	<img id="image1" src = "assets/image2.png" style = "width:10%;" hidden/>
 
-	<img id="image5" src = "assets/image5.png" style = "width:10%;" hidden/>
+	<img id="image2" src = "assets/image5.png" style = "width:10%;" hidden/>
 	
 	<img id="image3" src = "assets/image3.png" style = "width:10%;" hidden/>
 	
-	<img id="image11" src = "assets/image11.png" style = "width:10%;" hidden/>
+	<img id="image4" src = "assets/image11.png" style = "width:10%;" hidden/>
 
 
 
@@ -41,24 +39,18 @@
 	</button>
 
 	    <br />
-	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap('image6', 'image7')"/>
-	
-	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap('image7', 'image8')" hidden/>
-	
-	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap('image8', 'image6')" hidden/>
+	<img id="imageB" src = "assets/image6.png" style = "width:10%;" onclick = "itersrc(this, new Map([['assets/image6.png', 'assets/image7.png'], ['assets/image7.png', 'assets/image8.png'], ['assets/image8.png', 'assets/image6.png']]))"/>
 
 	    <text>                              </text>
 	
-	<img id="image9" src = "assets/image9.png" style = "width:10%;" onclick = "swap('image9', 'image10')" hidden/>
-	
-	<img id="image10" src = "assets/image10.png" style = "width:10%;" hidden/>
+	<img id="imageC" src = "assets/image9.png" style = "width:10%;" onclick = "setsrc(this, 'assets/image10.png')" hidden/>
 
 	<script>
 		function show1(stri){
-			let id = document.getElementById(stri); id.hidden = false;
+			let ig = document.getElementById(stri); ig.hidden = false;
 		}
 		function hide1(stri){
-			let id = document.getElementById(stri); id.hidden = true;
+			let ig = document.getElementById(stri); ig.hidden = true;
 		}
 		
 		function show(arr){
@@ -68,9 +60,12 @@
 			arr.forEach(hide1);
 		}
 		
-		function swap(stri1, stri2){
-			hide1(stri1);
-			show1(stri2);
+		function setsrc(el, source){
+			el.src = source;
+		}
+
+		function itersrc(el, next){
+			el.src = next.get(el.src);
 		}
 
 		
@@ -103,10 +98,10 @@
 				faviconlink.href = reddot;
 				document.title = "HeHe Boi";
 				
-				swap('image4', 'image1');
+				setsrc(document.getElementById('imageA'), 'assets/image1.png');
 				
-				show(['image2','image5','image3','image11']);
-				show1('image9');
+				show(['image1','image2','image3','image4']);
+				show1('imageC');
 				
 				isfirst = false;
 			}
