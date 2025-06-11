@@ -44,11 +44,11 @@
 		UNDO
 	</button>
 	
-	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap(image7)"/>
+	<img id="image6" src = "assets/image6.png" style = "width:10%;" onclick = "swap()"/>
 	
-	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap(image8)"/>
+	<img id="image7" src = "assets/image7.png" style = "width:10%;" onclick = "swap()"/>
 	
-	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap(image6)"/>
+	<img id="image8" src = "assets/image8.png" style = "width:10%;" onclick = "swap()"/>
 
 	<script>
 		var image1 = document.getElementById("image1"); image1.hidden = true;
@@ -91,12 +91,12 @@
 			image11.hidden = false;
 		}
 
-		function swap(var on){
+		function swap(){
 			image6.hidden = true;
 			image7.hidden = true;
 			image8.hidden = true;
 
-			on.hidden = false;
+			//on.hidden = false;
 		}
 	</script>
 
