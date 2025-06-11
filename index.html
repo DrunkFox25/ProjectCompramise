@@ -54,17 +54,26 @@
 	<img id="image10" src = "assets/image10.png" style = "width:10%;" hidden/>
 
 	<script>
-		function setvis(arr, val){
-			arr.forEach(setvis(val));
+		function show1(i){
+			document.getElementById(stri).hidden = false;
 		}
-		function setvis1(stri, val){
-			document.getElementById(stri).hidden = val;
+		function hide1(stri){
+			document.getElementById(stri).hidden = true;
+		}
+		
+		function show(arr){
+			arr.forEach(show1(val));
+		}
+		function hide(arr){
+			arr.forEach(hide1(val));
 		}
 		
 		function swap(stri1, stri2){
-			var i1 = document.getElementById(stri1); i1.hidden = true;
-			var i2 = document.getElementById(stri2); i2.hidden = false;
+			hide1(stri1);
+			show1(stri2);
 		}
+
+		
 
 		let reddot = 'https://raw.githubusercontent.com/DrunkFox25/ProjectCompramise/refs/heads/main/assets/reddot.ico';
 		let bluedot = 'https://raw.githubusercontent.com/DrunkFox25/ProjectCompramise/refs/heads/main/assets/bluedot.ico';
@@ -79,34 +88,27 @@
 		
 
 		
-		var image2 = document.getElementById("image2"); 
-		var image3 = document.getElementById("image3");
-		var image5 = document.getElementById("image5");
-		var image11 = document.getElementById("image11");
-
 		
-		var image9 = document.getElementById("image9");
+
 
 		faviconlink.href = bluedot;
 
-		let i910 = true;
+		let isfirst = true;
 		
 		function doit(){
 			alert('What haz bean dun cannon b undun! Plz click the pics');
-			
-			faviconlink.href = reddot;
-			document.title = "HeHe Boi";
 
-			swap('image4', 'image1');
-			
-			image2.hidden = false;
-			image3.hidden = false;
-			image5.hidden = false;
-			image11.hidden = false;
-
-			if(i910){
-				image9.hidden = false;
-				i90 = false;
+			if(isfirst){
+				
+				faviconlink.href = reddot;
+				document.title = "HeHe Boi";
+				
+				swap('image4', 'image1');
+				
+				show(["image2","image5","image3","image11"]);
+				show1("image9");
+				
+				isfirst = false;
 			}
 		}
 	</script>
